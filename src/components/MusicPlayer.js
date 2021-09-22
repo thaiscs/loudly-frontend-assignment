@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 import { faPauseCircle } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import styles from "../styles/MusicPlayer.module.css";
+import LikeButton from "./LikeButton";
 
 const MusicPlayer = ({ soundtracks, musicSrc }) => {
   const music = musicSrc.map((src) => new Audio(src));
@@ -27,15 +28,19 @@ const MusicPlayer = ({ soundtracks, musicSrc }) => {
             </a>
           </div>
           <div className="song-title">{song.name}</div>
-          <div className="play-button" onClick={() => music[key].play()}>
+          <div
+            className={`${styles.button} play-button`}
+            onClick={() => music[key].play()}
+          >
             <FontAwesomeIcon icon={faPlayCircle} />
           </div>
-          <div className="pause-button" onClick={() => music[key].pause()}>
+          <div
+            className={`${styles.button} pause-button`}
+            onClick={() => music[key].pause()}
+          >
             <FontAwesomeIcon icon={faPauseCircle} />
           </div>
-          <div className="like-button">
-            <FontAwesomeIcon icon={faHeart} />
-          </div>
+          <LikeButton songId={song.id} />
         </li>
       ))}
     </ul>
