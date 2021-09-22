@@ -6,7 +6,10 @@ import styles from "../styles/MusicPlayer.module.css";
 import LikeButton from "./LikeButton";
 
 const MusicPlayer = ({ soundtracks, musicSrc }) => {
+  // this variable creates audio players for all tracks
   const music = musicSrc.map((src) => new Audio(src));
+
+  // state management to pause previous song
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentPlaying, setCurrentPlaying] = useState(null);
 

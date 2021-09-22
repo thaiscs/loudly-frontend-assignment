@@ -37,7 +37,10 @@ const LikeButton = ({ songId }) => {
         handleLikeActions();
       }}
     >
-      <FontAwesomeIcon icon={faHeart} style={liked ? { color: "red" } : {}} />
+      <FontAwesomeIcon
+        icon={faHeart}
+        style={liked ? { color: "red" } : { color: "#cf03aa" }} // toggle effect
+      />
     </div>
   );
 };

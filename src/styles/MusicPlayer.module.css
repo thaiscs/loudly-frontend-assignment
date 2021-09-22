@@ -1,4 +1,26 @@
 .button:hover {
   cursor: pointer;
   color: red;
+  transform: scale(1.5);
+  transition: all 0.2s ease-in-out;
+}
+
+button:target {
+  transform: scale(1.5);
+}
+.button {
+  width: 10%;
+  padding: 7px;
+}
+
+.button svg {
+  font-size: 2rem;
+}
+
+.button {
+  color: blue;
+}
+
+.like-button {
+  color: #cf03aa;
 }

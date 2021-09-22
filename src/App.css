@@ -2,16 +2,39 @@
   box-sizing: border-box;
 }
 
+html {
+  background-image: url("./assets/love-music.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .music-list {
   list-style-type: none;
+  padding: 10px;
+}
+
+.soundtrack {
+  display: flex;
 }
 
 .thumbnail img {
-  height: 100px;
-  width: 150px;
+  width: 89px;
+  border-radius: 30%;
   object-fit: contain;
+  padding: 5px;
+}
+
+.song-title {
+  width: 71%;
+  text-align: left;
+  padding: 30px;
+  font-family: system-ui;
+  font-weight: 100;
+  color: aliceblue;
 }

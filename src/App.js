@@ -26,7 +26,6 @@ const App = () => {
             // so I've decided to create my own src list with a sample file
             // this way I don't waste time searching manually for each of them
             setMusicSrc(Array(data.length).fill(audioFile));
-            console.log(data);
           })
           .catch((error) => console.log(error)); // with more time I could customize an error page
       }
