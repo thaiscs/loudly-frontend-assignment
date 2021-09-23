@@ -1,8 +1,7 @@
-import * as React from "react";
-import "./App.css";
+import "./styles/App.css";
 import { useEffect, useState } from "react";
 import MusicPlayer from "./components/MusicPlayer";
-import audioFile from "./audioSample.mp3";
+import audioFile from "./assets/audioSample.mp3";
 
 type Soundtracks = {
   list: Array<Object>,
@@ -27,7 +26,7 @@ const App = () => {
             // this way I don't waste time searching manually for each of them
             setMusicSrc(Array(data.length).fill(audioFile));
           })
-          .catch((error) => console.log(error)); // with more time I could customize an error page
+          .catch((error) => console.log(error)); // TODO: customize an error page
       }
     );
   }, []);
